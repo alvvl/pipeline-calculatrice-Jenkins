@@ -1,6 +1,12 @@
 pipeline {
     agent none
     stages {
+	stage('Branche') {
+		agent any
+		steps {
+			echo "branche dev"
+		}
+	}
         stage('Build') {
             agent {
                 docker {
